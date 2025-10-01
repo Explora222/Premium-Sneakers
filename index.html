@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SneakPeak – Premium Sneakers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">SneakPeak</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Step Into Style</h1>
+      <p>Discover premium sneakers that fuse comfort, fashion & innovation.</p>
+      <a href="#shop" class="cta-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="shop" class="products">
+    <div class="container">
+      <h2>Featured Sneakers</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="Nike Air Zoom Pegasus.jpeg" alt="Air Zoom Pegasus">
+          <h3>Air Zoom Pegasus</h3>
+          <p>R1500</p>
+          <button class="add-to-cart" data-name="Air Zoom Pegasus" data-price="120">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="Nike React Element.jpeg" alt="React Element 55">
+          <h3>React Element 55</h3>
+          <p>R1800</p>
+          <button class="add-to-cart" data-name="React Element 55" data-price="130">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="Ultraboost.jpeg" alt="Ultra Boost">
+          <h3>Ultra Boost</h3>
+          <p>R2300</p>
+          <button class="add-to-cart" data-name="Ultra Boost" data-price="180">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="Stan Smith.jpeg" alt="Stan Smith">
+          <h3>Stan Smith</h3>
+          <p>R1300</p>
+          <button class="add-to-cart" data-name="Stan Smith" data-price="80">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="Yeezy 350.jpeg" alt="Yeezy Boost 350">
+          <h3>Yeezy Boost 350</h3>
+          <p>R2600</p>
+          <button class="add-to-cart" data-name="Yeezy Boost 350" data-price="220">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="Chuck Taylor.jpeg" alt="Chuck Taylor All Star">
+          <h3>Chuck Taylor All Star</h3>
+          <p>R1000</p>
+          <button class="add-to-cart" data-name="Chuck Taylor All Star" data-price="60">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We’re sneaker enthusiasts dedicated to curating the best from top brands. Our mission: make every step stylish & comfortable.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shumani Monyai. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

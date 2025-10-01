@@ -1,0 +1,124 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+  font-family:'Poppins',sans-serif;
+  background:#0f0f0f; color:#f8f8f8;
+  line-height:1.6; scroll-behavior:smooth;
+}
+
+.container {max-width:1200px; margin:0 auto; padding:0 20px;}
+
+
+header {
+  position:fixed; top:0; left:0; width:100%;
+  background:rgba(15,15,15,0.8); backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,0.4); z-index:1000;
+}
+header .container {display:flex; justify-content:space-between; align-items:center; padding:20px;}
+.logo {
+  font-family:'Clash Display',sans-serif; font-size:1.8rem; font-weight:700;
+  background:linear-gradient(135deg,#a855f7,#06b6d4);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+nav ul {display:flex; list-style:none;}
+nav li {margin-left:30px;}
+nav a {text-decoration:none; color:#f8f8f8; font-weight:500; transition:color 0.3s;}
+nav a:hover {color:#06b6d4;}
+.cart-icon {
+  font-size:1.3rem; cursor:pointer;
+  background:#06b6d4; color:#0f0f0f;
+  padding:6px 14px; border-radius:20px; font-weight:600;
+  transition:transform 0.2s;
+}
+.cart-icon:hover {transform:scale(1.1);}
+
+
+.hero {
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1606813908918-763bc8f5b62a?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; color:#fff; position:relative;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:rgba(0,0,0,0.6); backdrop-filter:blur(4px);
+}
+.hero-content {position:relative; z-index:1; max-width:700px; padding:20px;}
+.hero h1 {
+  font-family:'Clash Display',sans-serif; font-size:4rem; margin-bottom:20px;
+  animation:fadeInDown 1s ease-out;
+}
+.hero p {font-size:1.3rem; margin-bottom:35px; animation:fadeInUp 1s ease-out 0.3s both;}
+.cta-btn {
+  display:inline-block;
+  background:linear-gradient(135deg,#a855f7,#06b6d4);
+  color:#fff; padding:16px 36px; font-weight:600; border-radius:50px;
+  text-decoration:none; font-size:1.1rem;
+  transition:all 0.3s ease; animation:fadeInUp 1s ease-out 0.6s both;
+}
+.cta-btn:hover {transform:translateY(-6px) scale(1.05); box-shadow:0 10px 30px rgba(6,182,212,0.4);}
+
+
+.products {padding:100px 0; background:#121212;}
+.products h2 {
+  text-align:center; font-size:2.6rem; margin-bottom:60px;
+  font-family:'Clash Display',sans-serif;
+  background:linear-gradient(135deg,#a855f7,#06b6d4);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.product-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:35px;}
+.product-card {
+  background:rgba(255,255,255,0.04); border-radius:20px; padding:25px;
+  backdrop-filter:blur(8px);
+  transition:transform 0.3s, box-shadow 0.3s; text-align:center;
+}
+.product-card:hover {transform:translateY(-10px); box-shadow:0 15px 35px rgba(168,85,247,0.3);}
+.product-card img {width:100%; border-radius:15px; margin-bottom:20px; transition:transform 0.3s;}
+.product-card:hover img {transform:scale(1.05);}
+.product-card h3 {margin:10px 0; font-size:1.3rem; font-weight:600;}
+.product-card p {color:#06b6d4; font-weight:600; margin-bottom:15px;}
+.add-to-cart {
+  background:#a855f7; border:none; color:#fff; padding:12px 28px;
+  border-radius:50px; cursor:pointer; font-weight:600; transition:all 0.3s;
+}
+.add-to-cart:hover {background:#9333ea; transform:scale(1.05);}
+
+
+.about {padding:100px 0; background:#0f0f0f; text-align:center;}
+.about h2 {font-size:2.5rem; margin-bottom:25px; font-family:'Clash Display',sans-serif;}
+.about p {max-width:800px; margin:0 auto; font-size:1.1rem; color:#bbb;}
+
+
+.contact {padding:100px 0; background:#121212;}
+.contact h2 {text-align:center; font-size:2.5rem; margin-bottom:50px; font-family:'Clash Display',sans-serif;}
+#contact-form {max-width:600px; margin:0 auto; display:flex; flex-direction:column;}
+#contact-form input,#contact-form textarea {
+  margin-bottom:20px; padding:16px;
+  border:1px solid #333; border-radius:8px;
+  background:#1c1c1c; color:#fff; font-size:1rem;
+}
+#contact-form button {
+  background:linear-gradient(135deg,#a855f7,#06b6d4);
+  border:none; color:#fff; padding:15px; border-radius:8px;
+  cursor:pointer; font-weight:600; transition:all 0.3s;
+}
+#contact-form button:hover {transform:translateY(-3px);}
+
+
+footer {background:#0a0a0a; color:#888; padding:40px 0; text-align:center;}
+footer .container {display:flex; flex-direction:column; align-items:center;}
+footer ul {display:flex; list-style:none; margin-top:15px;}
+footer li {margin:0 12px;}
+footer a {color:#888; text-decoration:none; transition:color 0.3s;}
+footer a:hover {color:#06b6d4;}
+
+
+@keyframes fadeInDown {from{opacity:0; transform:translateY(-50px);} to{opacity:1; transform:translateY(0);}}
+@keyframes fadeInUp {from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);}}
+
+@media(max-width:768px){
+  .hero h1{font-size:2.8rem;}
+  .hero p{font-size:1.1rem;}
+  nav ul {flex-direction:column; position:absolute; top:70px; left:0; width:100%; background:#0f0f0f; display:none;}
+  nav li {margin:15px 0; text-align:center;}
+}
